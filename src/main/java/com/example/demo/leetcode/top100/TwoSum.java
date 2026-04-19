@@ -1,5 +1,8 @@
 package com.example.demo.leetcode.top100;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /*
  Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
@@ -40,6 +43,19 @@ Follow-up: Can you come up with an algorithm that is less than O(n2) time comple
 public class TwoSum {
 
     public int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> pairings = new HashMap<>();
+
+        int index = 0;
+        for (int num : nums) {
+            pairings.put(target - num, index++);
+        }
+
+        Integer solutionIndex;
+        for (int i = 0; i < nums.length; i++) {
+            int num = nums[i];
+            solutionIndex = pairings.get(num);
+            if (solutionIndex != null && solutionIndex != i) return new int[]{i, solutionIndex};
+        }
         return new int[]{};
     }
 }
