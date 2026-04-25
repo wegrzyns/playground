@@ -5,8 +5,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
-
 
 
 /*
@@ -47,8 +45,8 @@ class HasDuplicateTest {
         CASE_1(array(1, 2, 3, 3), true),
         CASE_2(array(1, 2, 3, 4), false);
 
-        private int[] input;
-        boolean output;
+        private final int[] input;
+        private final boolean output;
 
         TestCase(int[] input, boolean output) {
             this.input = input;
