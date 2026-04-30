@@ -44,9 +44,9 @@ class AnagramTest {
         CASE_1("racecar", "carrace", true),
         CASE_2("jar", "jam", false);
 
-        private String string1;
-        private String string2;
-        private boolean isAnagram;
+        private final String string1;
+        private final String string2;
+        private final boolean isAnagram;
 
         TestCase(String string1, String string2, boolean isAnagram) {
             this.string1 = string1;

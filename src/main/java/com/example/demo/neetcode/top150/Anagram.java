@@ -2,7 +2,6 @@ package com.example.demo.neetcode.top150;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.function.BiFunction;
 
 /*
 Given two strings s and t, return true if the two strings are anagrams of each other, otherwise return false.
